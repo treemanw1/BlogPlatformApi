@@ -1,0 +1,45 @@
+### Tag Endpoints
+GET http://localhost:5277/tags
+###
+POST http://localhost:5277/tags
+Content-Type: application/json
+
+{
+	"name": "Tech"
+}
+###
+DELETE http://localhost:5277/tags/2
+
+### Article Endpoints
+GET http://localhost:5277/articles
+###
+GET http://localhost:5277/articles/tag-id/3
+###
+GET http://localhost:5277/articles/id/0
+###
+POST http://localhost:5277/articles
+Content-Type: application/json
+
+{
+	"title": "The Future of AI",
+	"body": "DeepSeek is da best.",
+	"tagIds": [4]
+}
+###
+DELETE http://localhost:5277/articles/2
+### 
+PUT http://localhost:5277/articles/3
+Content-Type: application/json
+
+{
+	"title": "Updated Article Title x2",
+	"body": "Updated body of the article.",
+	"tagIds": [4]
+}
+### 
+PUT http://localhost:5277/articles/3
+Content-Type: application/json
+
+{
+	"title": "I'm sexy"
+}
